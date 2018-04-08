@@ -144,12 +144,18 @@ bot.on('message', message => {
 
 
 bot.on('message', message => {
-  if (message.content == prefix + 'nom') {
+  if (message.content.startsWith(prefix + 'nom') ) {  
+    let args = message.content.split(' ')
+    var msg = ''
+    if (args[1] != null)
+    {
+        msg += args[1]
+    }
     let random = Math.floor(Math.random() * (10 - 1 +1)) + 1
     message.channel.send(msg + '\n', {
             files: [{
             attachment: './res/nom/nom'+random+'.gif',
-            name: 'nom'+random+'.jpg'
+            name: 'nom'+random+'.gif'
             }]
     })
     .then(console.log('success'))
