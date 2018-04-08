@@ -103,6 +103,7 @@ bot.on('message', message => {
             name: 'pat'+random+'.gif'
             }]
     })
+    .then(console.log('success'))
     .catch(console.error)
   }
 })
@@ -122,6 +123,7 @@ bot.on('message', message => {
             name: 'hug'+random+'.gif'
             }]
     })
+    .then(console.log('success'))
     .catch(console.error)
   }
 })
@@ -135,6 +137,7 @@ bot.on('message', message => {
             name: 'food'+random+'.jpg'
             }]
     })
+    .then(console.log('success'))
     .catch(console.error)
   }
 })
@@ -149,6 +152,7 @@ bot.on('message', message => {
             name: 'nom'+random+'.jpg'
             }]
     })
+    .then(console.log('success'))
     .catch(console.error)
   }
 })
