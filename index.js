@@ -87,3 +87,57 @@ bot.on('message', message => {
     }
   }
 })
+
+bot.on('message', message => {
+  if (message.content.startsWith(prefix + 'pat') ) {  
+    let args = message.content.split(' ')
+    var msg = ''
+    if (args[1] != null)
+    {
+        msg += args[1]
+    }
+    let random = Math.floor(Math.random() * (14 - 1 +1)) + 1
+    message.channel.send(msg + '\n', {
+            files: [{
+            attachment: './res/pat/pat'+random+'.gif',
+            name: 'pat'+random+'.gif'
+            }]
+    })
+    .then(console.log('success'))
+    .catch(console.error)
+  }
+})
+
+bot.on('message', message => {
+  if (message.content.startsWith(prefix + 'hug') ) {  
+    let args = message.content.split(' ')
+    var msg = ''
+    if (args[1] != null)
+    {
+        msg += args[1]
+    }
+    let random = Math.floor(Math.random() * (10 - 1 +1)) + 1
+    message.channel.send(msg + '\n', {
+            files: [{
+            attachment: './res/hug/hug'+random+'.gif',
+            name: 'hug'+random+'.gif'
+            }]
+    })
+    .then(console.log('success'))
+    .catch(console.error)
+  }
+})
+
+bot.on('message', message => {
+  if (message.content == prefix + 'food') {
+    let random = Math.floor(Math.random() * (41 - 1 +1)) + 1
+    message.channel.send('', {
+            files: [{
+            attachment: './res/food/food'+random+'.jpg',
+            name: 'food'+random+'.jpg'
+            }]
+    })
+    .then(console.log('success'))
+    .catch(console.error)
+  }
+})
