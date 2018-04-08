@@ -103,7 +103,6 @@ bot.on('message', message => {
             name: 'pat'+random+'.gif'
             }]
     })
-    .then(console.log('success'))
     .catch(console.error)
   }
 })
@@ -123,7 +122,6 @@ bot.on('message', message => {
             name: 'hug'+random+'.gif'
             }]
     })
-    .then(console.log('success'))
     .catch(console.error)
   }
 })
@@ -137,7 +135,20 @@ bot.on('message', message => {
             name: 'food'+random+'.jpg'
             }]
     })
-    .then(console.log('success'))
+    .catch(console.error)
+  }
+})
+
+
+bot.on('message', message => {
+  if (message.content == prefix + 'nom') {
+    let random = Math.floor(Math.random() * (10 - 1 +1)) + 1
+    message.channel.send(msg + '\n', {
+            files: [{
+            attachment: './res/nom/nom'+random+'.gif',
+            name: 'nom'+random+'.jpg'
+            }]
+    })
     .catch(console.error)
   }
 })
