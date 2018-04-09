@@ -103,7 +103,7 @@ bot.on('message', message => {
             name: 'pat'+random+'.gif'
             }]
     })
-    .then(console.log('success'))
+    .then(console.log('successpat'))
     .catch(console.error)
   }
 })
@@ -123,7 +123,7 @@ bot.on('message', message => {
             name: 'hug'+random+'.gif'
             }]
     })
-    .then(console.log('success'))
+    .then(console.log('successhug'))
     .catch(console.error)
   }
 })
@@ -137,7 +137,7 @@ bot.on('message', message => {
             name: 'food'+random+'.jpg'
             }]
     })
-    .then(console.log('success'))
+    .then(console.log('successfood'))
     .catch(console.error)
   }
 })
@@ -158,7 +158,7 @@ bot.on('message', message => {
             name: 'nom'+random+'.gif'
             }]
     })
-    .then(console.log('success'))
+    .then(console.log('successnom'))
     .catch(console.error)
   }
 })
@@ -169,16 +169,16 @@ bot.on('message', message => {
     var msg = ''
     if (args[1] != null)
     {
-    	msg += args[1]
+        msg += args[1]
     }
-    let random = Math.floor(Math.random() * (24 - 1 +1)) + 1
+    let random = Math.floor(Math.random() * (10 - 1 +1)) + 1
     message.channel.send(msg + '\n', {
-			files: [{
-			attachment: './res/slap/slap'+random+'.gif',
-			name: 'slap'+random+'.gif'
-			}]
-	})
-	.then(console.log('success'))
-	.catch(console.error)
+            files: [{
+            attachment: './res/slap/slap'+random+'.gif',
+            name: 'slap'+random+'.gif'
+            }]
+    })
+    .then(console.log('successslap'))
+    .catch(console.error)
   }
 })
