@@ -162,3 +162,23 @@ bot.on('message', message => {
     .catch(console.error)
   }
 })
+
+bot.on('message', message => {
+  if (message.content.startsWith(prefix + 'slap') ) {  
+    let args = message.content.split(' ')
+    var msg = ''
+    if (args[1] != null)
+    {
+    	msg += args[1]
+    }
+    let random = Math.floor(Math.random() * (24 - 1 +1)) + 1
+    message.channel.send(msg + '\n', {
+			files: [{
+			attachment: './res/slap/slap'+random+'.gif',
+			name: 'slap'+random+'.gif'
+			}]
+	})
+	.then(console.log('success'))
+	.catch(console.error)
+  }
+})
