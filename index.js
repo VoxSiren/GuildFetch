@@ -182,3 +182,43 @@ bot.on('message', message => {
     .catch(console.error)
   }
 })
+
+bot.on('message', message => {
+  if (message.content.startsWith(prefix + 'kiss') ) {  
+    let args = message.content.split(' ')
+    var msg = ''
+    if (args[1] != null)
+    {
+        msg += args[1]
+    }
+    let random = Math.floor(Math.random() * (12 - 1 +1)) + 1
+    message.channel.send(msg + '\n', {
+            files: [{
+            attachment: './res/kiss/kiss'+random+'.gif',
+            name: 'kiss'+random+'.gif'
+            }]
+    })
+    .then(console.log('successkiss'))
+    .catch(console.error)
+  }
+})
+
+bot.on('message', message => {
+  if (message.content.startsWith(prefix + 'cry') ) {  
+    let args = message.content.split(' ')
+    var msg = ''
+    if (args[1] != null)
+    {
+        msg += args[1]
+    }
+    let random = Math.floor(Math.random() * (13 - 1 +1)) + 1
+    message.channel.send(msg + '\n', {
+            files: [{
+            attachment: './res/cry/cry'+random+'.gif',
+            name: 'kiss'+random+'.gif'
+            }]
+    })
+    .then(console.log('successcry'))
+    .catch(console.error)
+  }
+})
