@@ -182,7 +182,24 @@ bot.on('message', message => {
     .catch(console.error)
   }
 })
-
+bot.on('message', message => {
+    if (message.content.startsWith(prefix + 'search')) {
+    	let args = message.content.split(' ')
+    	if (args[1] != null) {
+    		bot.guilds.forEach(function(guild) {
+        		guild.members.forEach(function(member){
+        			if(member.user.tag == args[1]){
+        				message.channel.send('Id of ' + args[1] + ' :' + member.user.id)
+        			}
+        		})
+        	})
+    	}
+    	else {
+    		message.channel.send('Unspecified tag')
+    	}
+      	
+    }
+});
 bot.on('message', message => {
   if (message.content.startsWith(prefix + 'kiss') ) {  
     let args = message.content.split(' ')
