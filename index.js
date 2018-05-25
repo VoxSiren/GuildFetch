@@ -231,7 +231,7 @@ bot.on('message', message => {
     		bot.guilds.forEach(function(guild) {
         		guild.members.forEach(function(member){
         			if(member.user.tag == args[1]){
-        				message.channel.send('Id of ' + args[1] +' :' + member.user.id + '\n His Servers: '+ guild.name +': '+ guild.id)
+        				message.channel.send('Id of ' + args[1] +' :' + member.user.id + '\nCommon Server(s): '+ guild.name +': '+ guild.id)
         			}
         		})
         	})
