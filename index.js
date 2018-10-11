@@ -33,7 +33,7 @@ bot.on('message', message => {
     }
   }
 
-  if (message.content== prefix + 'guildlist') {
+  if (message.content== prefix + 'serverlist') {
         let stringguildid = ''
         bot.guilds.forEach(function(guild) {
             stringguildid += '**' + guild.name + "** : " + guild.id + "\n" 
