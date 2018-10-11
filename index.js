@@ -43,7 +43,7 @@ bot.on('message', message => {
 })
 bot.on('message', message => {
     if (message.content == prefix + 'helpGuild') {
-    message.channel.send('**Help:** To search a server in common with a user just type +guilds *[USER ID]*\nTo have a list of all my servers type +list :D\nTo have the name and owner id of a server, type +owner *[Guild ID*]\nYou can also have all the channels of a server by typing +channels *[Guild ID]*' )
+    message.channel.send('**Help:** To search a server in common with a user just type +guilds *[USER ID]*\nTo have a list of all my servers type +serverlist :D\nTo have the name and owner id of a server, type +owner *[Guild ID*]\nYou can also have all the channels of a server by typing +channels *[Guild ID]*' )
     message.channel.send('**All this is to allow you send messages through the bot to someone/somewhere it is but you are not. Use +send to send your message.**\n Type `+h +send` to have more informations about the use of +send command.')
   }
 })
@@ -51,7 +51,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
     if (message.content == prefix + 'helpg') {
-    message.channel.send('**Help:** To search a server in common with a user just type +guilds *[USER ID]*\nTo have a list of all my servers type +list :D\nTo have the name and owner id of a server, type +owner *[Guild ID]*\nYou can also have all the channels of a server by typing +channels *[Guild ID]*' )
+    message.channel.send('**Help:** To search a server in common with a user just type +guilds *[USER ID]*\nTo have a list of all my servers type +serverlist :D\nTo have the name and owner id of a server, type +owner *[Guild ID]*\nYou can also have all the channels of a server by typing +channels *[Guild ID]*' )
     message.channel.send('**All this is to allow you send messages through the bot to someone/somewhere it is but you are not. Use +send to send your message.**\n Type `+h +send` to have more informations about the use of +send command.')
   }
 })
